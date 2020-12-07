@@ -79,7 +79,7 @@ namespace PracticaApp
                                 {
                                     contadorPc = contadorPc + 1;
                                 }
-                                //contadorPc = contadorPc + pc[i,j];
+                                
                                 if (pc[i,j] == 1)
                                 {
                                     contadorSoldado = contadorSoldado + 1;
@@ -376,11 +376,6 @@ namespace PracticaApp
                 opcion = int.Parse(Console.ReadLine());
                 Console.WriteLine("");
             }
-
-            
-
-            
-
 
 
             //Console.ReadKey();
