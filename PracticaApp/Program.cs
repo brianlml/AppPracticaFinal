@@ -117,12 +117,23 @@ namespace PracticaApp
                             Console.WriteLine("Fila: " + (i + 1));
                             for (int j = 0; j < tamC; j++)
                             {
-
-                                player[i, j] = int.Parse(Console.ReadLine());
+                                //Verifico que ingrese datos.
+                                try
+                                {
+                                    player[i, j] = int.Parse(Console.ReadLine());
+                                }
+                                
+                                catch (FormatException ex)
+                                {
+                                    Console.WriteLine("El error es: "+ex.Message);
+                                    Console.WriteLine("Ingrese un dato valido!");
+                                    player[i, j] = int.Parse(Console.ReadLine());
+                                }
+                                
                             }
                             Console.WriteLine("");
                         }
-
+                        //Muestro el tablero
                         for (int i = 0; i < tamF; i++)
                         {
                             Console.Write(" | ");
@@ -180,6 +191,7 @@ namespace PracticaApp
                         Console.WriteLine("Se armo el tablero correctamente!");
                         break;
                     case 3:
+
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("The Match");
                         Console.ResetColor();
@@ -222,7 +234,7 @@ namespace PracticaApp
                                     contadorPc = contadorPc - 1;
                                     Console.WriteLine("Ejercito restante de la PC: " + contadorPc);
                                     pc[f, c] = 0;
-                                    
+                                
 
                                 }
                                 else
@@ -382,14 +394,43 @@ namespace PracticaApp
         }
         static void Logo()
         {
-            Console.WriteLine("#     #                                ######                                   ");
-            Console.WriteLine("##    #   ##   #    #   ##   #         #     #   ##   ##### ##### #      ###### ");
-            Console.WriteLine("# #   #  #  #  #    #  #  #  #         #     #  #  #    #     #   #      #      ");
-            Console.WriteLine("#  #  # #    # #    # #    # #         ######  #    #   #     #   #      #####  ");
-            Console.WriteLine("#   # # ###### #    # ###### #         #     # ######   #     #   #      #      ");
-            Console.WriteLine("#    ## #    #  #  #  #    # #         #     # #    #   #     #   #      #      ");
-            Console.WriteLine("#     # #    #   ##   #    # ######    ######  #    #   #     #   ###### ###### ");
+            Console.WriteLine("#     #                                ######                                            ");
+            Console.WriteLine("##    #   ##   #    #   ##   #         #     #   ##   ##### ##### #      ######          ");
+            Console.WriteLine("# #   #  #  #  #    #  #  #  #         #     #  #  #    #     #   #      #               ");
+            Console.WriteLine("#  #  # #    # #    # #    # #         ######  #    #   #     #   #      #####           ");
+            Console.WriteLine("#   # # ###### #    # ###### #         #     # ######   #     #   #      #               ");
+            Console.WriteLine("#    ## #    #  #  #  #    # #         #     # #    #   #     #   #      #               ");
+            Console.WriteLine("#     # #    #   ##   #    # ######    ######  #    #   #     #   ###### ######          ");
             Console.WriteLine("");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOWMMMMMMMW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOMMMMMMMMW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOMMMMMMMMW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOMMMMMMMMW");
+            Console.WriteLine("                 xxxxxxxxxkKKKKKKKKKkxxxxxxxxxxOKKKKKKKKK");
+            Console.WriteLine("                 WWWWWWWWWOlllllllllONWWWWWWWWNklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 KKKKKKKKKkxxxxxxxxxk0KKKKKKKK0kxxxxxxxxx");
+            Console.WriteLine("                 lllllllllkWWWWWWWWWkllllllllllOWWWWWWWWW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOMMMMMMMMW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllll0MMMMMMMMW");
+            Console.WriteLine("                 lllllllllOWMMMMMMMWOllllllllllOMMMMMMMMW");
+            Console.WriteLine("                 xxxxxxxxxk0KKKKKKK0kxxxxxxxxxxO0KKKKKKK0");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllONWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WMMMMMMMWOlllllllllOWWMMMMMMMWklllllllll");
+            Console.WriteLine("                 WWWWWWWWWOlllllllllONWWWWWWWMWklllllllll");
+            Console.WriteLine("");
+            Console.WriteLine("                         #              #     ");
+            Console.WriteLine("                         #    #  #    # #    #");
+            Console.WriteLine("                         #    #   #  #  #    #");
+            Console.WriteLine("                         #    #    ##   #    #");
+            Console.WriteLine("                         #######   ##   #######");
+            Console.WriteLine("                              #   #  #       #");
+            Console.WriteLine("                              #  #    #      #");
+
         }
         static void Menu()
         {
